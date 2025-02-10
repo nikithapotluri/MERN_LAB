@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Information</title>
+</head>
+<body>
+  <h1>Employee Information</h1>
+  <button onclick="addEmployees()">Enter Employees</button>
+  <button onclick="searchEmployee()">Search Employee</button>
+  <script> 
+          const employees = [];
+    function addEmployees() {
+      for (let i = 0; i < 5; i++) {
+        const firstName = prompt(`Enter the first name of employee ${i + 1}:`);
+        const lastName = prompt(`Enter the last name of employee ${i + 1}:`);
+        const department = prompt(`Enter the department of employee ${i + 1}:`);
+        const employee = {
+          firstName: firstName,
+          lastName: lastName,
+          department: department
+        };
+        employees.push(employee);
+      }
+      alert("All employees have been added!");
+    }
+    function searchEmployee() {
+      if (employees.length === 0) {
+        alert("No employees have been added yet!");
+        return;
+      }
+      const searchName = prompt("Enter the first name of the employee to search:");
+      const foundEmployee = employees.find(emp => emp.firstName.toLowerCase() === searchName.toLowerCase());
+      if (foundEmployee) {
+        alert(
+          `Employee Found:\n` +
+          `First Name: ${foundEmployee.firstName}\n` +
+          `Last Name: ${foundEmployee.lastName}\n` +
+          `Department: ${foundEmployee.department}`
+        );
+      } else {
+        alert("Employee not found!");
+      }
+    }
+   </script>
+</body>
+</html>

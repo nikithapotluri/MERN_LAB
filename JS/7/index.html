@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Paragraph Background Color</title>
+</head>
+<body>
+  <h1>Change Paragraph Background Color</h1>
+  <p id="myParagraph" style="padding: 10px; border: 1px solid black;">
+    This is a sample paragraph. Change my background color!
+  </p>
+  <button onclick="changeBackgroundColor()">Set Background Color</button>
+  <script>  
+            function changeBackgroundColor() {
+    let color = prompt("Enter a color (name, hex, or rgb):");
+    if (color)
+      document.getElementById("myParagraph").style.backgroundColor = color;
+    else
+      alert("No color entered. Please try again.");
+  }
+  </script>
+</body>
+</html>

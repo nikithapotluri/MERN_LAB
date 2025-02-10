@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analyzer</title>
+</head>
+<body>
+  <h1>Text Analyzer</h1>
+
+  <form id="textForm" onsubmit="analyzeText(event)">
+    <label for="userText">Enter your text below:</label><br><br>
+    <textarea id="userText" rows="10" cols="50" placeholder="Type or paste text here..."></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <script>     
+  function analyzeText(event) {
+    event.preventDefault(); 
+    const text = document.getElementById("userText").value;
+    const characterCount = text.length;
+    const wordCount = text.trim().split(/\s+/).filter(word => word !== "").length;
+    const lineCount = text.split(/\n/).length;
+    alert(`Character Count: ${characterCount}\nWord Count: ${wordCount}\nLine Count: ${lineCount}`);
+  }
+   </script>
+</body>
+</html>

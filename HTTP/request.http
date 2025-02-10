@@ -1,0 +1,52 @@
+post http://localhost:3000/add 
+Content-Type: application/json
+
+{
+    "studentName":"Nikitha",
+    "rollNo":"22501A05F0",
+    "department":"ECE"
+}
+###
+get http://localhost:3000/getStudentDetails
+
+###
+put http://localhost:3000/edit
+Content-Type: application/json
+
+{
+    "studentName":"Nikitha P.",
+    "rollNo":"22501A05F0",
+    "department":"CSE"
+}
+
+###
+delete http://localhost:3000/delete/22501A05F0
+
+
+
+
+###
+get http://localhost:5000/getDetails
+
+###
+put http://localhost:5000/updateEmployee/2
+Content-Type: application/json
+
+{
+    "name": "Nikitha",
+    "age": "21"
+}
+
+###
+post http://localhost:5000/addEmployee
+Content-Type: application/json
+
+{
+        "name": "Navika",
+        "age": "25",
+        "designation": "Team Lead",
+        "department": "Technical Team"
+}
+
+###
+delete http://localhost:5000/deleteEmployee/2
