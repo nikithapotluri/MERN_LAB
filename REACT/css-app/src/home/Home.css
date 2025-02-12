@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grow{
+    color: rgb(4, 4, 169);
+}
+
+.image{
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(4, 4, 169);
+}
+
+.btns{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home{
+    display: flex;
+   justify-content: space-around;
+}
