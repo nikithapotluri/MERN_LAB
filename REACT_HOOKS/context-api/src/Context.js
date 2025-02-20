@@ -1,10 +1,11 @@
 import React, { createContext, useState } from 'react';
 export const Context = createContext();
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const toggleLogin = () => {
+    setIsLoggedIn((prevState) => !prevState);
   };
   return (
-    <Context.Provider value={{ theme, toggleTheme }}> {children}    </Context.Provider>
-  )};
+    <Context.Provider value={{ isLoggedIn, toggleLogin }}> {children} </Context.Provider>
+  );
+};

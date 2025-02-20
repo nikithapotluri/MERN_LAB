@@ -3,7 +3,10 @@ import { useSearchParams } from 'react-router-dom';
 const products = [
   { id: 1, name: 'Face mask' },
   { id: 2, name: 'Moistruizer' },
-  { id: 3, name: 'Lip gloss' }
+  { id: 3, name: 'Lip gloss' },
+  {
+    id:4, name:'Eyeliner'
+  }
 ];
 function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -17,7 +20,7 @@ function Products() {
   );
   return (
     <div>
-      <h2>Product List</h2>
+      <h2>Beauty Products</h2>
       <input type="text" value={query} onChange={handleSearch} />
       <ul>
         {final.map((product) => (
